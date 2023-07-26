@@ -1,0 +1,23 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "baseUrl": ".",
+    "rootDir": "./",
+    "paths": {
+      "@hooks/*": ["./src/hooks/*"],
+      "@pages/*": ["./src/pages/*"]
+        },
+    "types": ["vite/client"],
+    "sourceMap": true,
+    "outDir": "./dist",
+    "allowJs": false
+  },
+  "exclude": ["node_modules"],
+  "include": ["src", "**/*.tsx", "**/*.ts", "**/*.test.tsx", "vite.config.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
